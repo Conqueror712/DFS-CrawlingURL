@@ -14,6 +14,8 @@ with open('result.txt', 'r') as f:
 # 对域名列表进行字典序排序
 sorted_domains = sorted(domains)
 
-# 打印结果
-for domain in sorted_domains:
-    print(domain)
+# 将结果写入文件
+with open('sorted_result.txt', 'w') as f:
+    for domain in sorted_domains:
+        f.write(domain + '\n')
+        print(domain)
