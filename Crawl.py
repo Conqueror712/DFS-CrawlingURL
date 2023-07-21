@@ -87,6 +87,6 @@ if __name__ == '__main__':
     print('key:', key)
     '''
     print('>>>>>> [开始爬取] >>>>>>')
-    spider = spider(domain=domain, key="", depth=3)
+    spider = spider(domain=domain, key="", depth=2)
     spider.run()
     print('>>>>>> Finished! 结果已保存至result.txt中 >>>>>>')

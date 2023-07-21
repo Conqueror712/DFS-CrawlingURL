@@ -6,7 +6,7 @@ failed_cnt = 0
 texts = set()
 
 # 读取文件并提取域名
-with open('sorted_result.txt', 'r') as f:
+with open('../sorted_result.txt', 'r') as f:
     for line in f:
         url = "https://" + line.strip()
         tmp_downloaded = trafilatura.fetch_url(url)
@@ -22,6 +22,6 @@ with open('sorted_result.txt', 'r') as f:
         print("successful = ", successful_cnt)
         print("failed = ", failed_cnt)
 
-with open('long_text.txt', 'w') as f:
+with open('../long_text.txt', 'w') as f:
     for text in texts:
         f.write(text + '\n')

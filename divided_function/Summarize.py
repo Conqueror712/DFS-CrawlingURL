@@ -10,7 +10,7 @@ try:
 except:
     pass
 
-text = codecs.open('long_text.txt', 'r', 'utf-8').read()
+text = codecs.open('../long_text.txt', 'r', 'utf-8').read()
 tr4w = TextRank4Keyword()
 
 tr4w.analyze(text=text, lower=True, window=2)
