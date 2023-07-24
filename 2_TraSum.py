@@ -38,9 +38,10 @@ with open('sorted_result.txt', 'r') as f:
             tr4w.analyze(text=text, lower=True, window=2)
 
             with codecs.open('sum_text.txt', 'a', 'utf-8') as f:
-                f.write('>>>>>> 关键词：\n')
+                f.write('关键词：')
                 for item in tr4w.get_keywords(20, word_min_len=1):
-                    f.write(f"{item.word} {item.weight}\n")
+                    # f.write(f"{item.word} {item.weight}\n")
+                    f.write(f"{item.word} ")
                 f.write('\n')
 
             with codecs.open('long_text.txt', 'r', 'utf-8') as f:
@@ -49,10 +50,11 @@ with open('sorted_result.txt', 'r') as f:
             tr4s.analyze(text=text, lower=True, source='all_filters')
 
             with codecs.open('sum_text.txt', 'a', 'utf-8') as f:
-                f.write('>>>>>> 文本摘要：\n')
+                f.write('文本摘要：\n')
                 for item in tr4s.get_key_sentences(num=3):
-                    f.write(f"{item.index} {item.weight} {item.sentence}\n")
-                f.write('\n')
+                    # f.write(f"{item.index} {item.weight} {item.sentence}\n")
+                    f.write(f"{item.sentence}; ")
+                f.write('\n\n')
 
             # 清空texts和long_text.txt
             texts.clear()
@@ -72,9 +74,10 @@ if len(texts) > 0:
     tr4w.analyze(text=text, lower=True, window=2)
 
     with codecs.open('sum_text.txt', 'a', 'utf-8') as f:
-        f.write('>>>>>> 关键词：\n')
+        f.write('关键词：')
         for item in tr4w.get_keywords(20, word_min_len=1):
-            f.write(f"{item.word} {item.weight}\n")
+            # f.write(f"{item.word} {item.weight}\n")
+            f.write(f"{item.word} ")
         f.write('\n')
 
     with codecs.open('long_text.txt', 'r', 'utf-8') as f:
@@ -83,7 +86,8 @@ if len(texts) > 0:
     tr4s.analyze(text=text, lower=True, source='all_filters')
 
     with codecs.open('sum_text.txt', 'a', 'utf-8') as f:
-        f.write('>>>>>> 文本摘要：\n')
+        f.write('文本摘要：\n')
         for item in tr4s.get_key_sentences(num=3):
-            f.write(f"{item.index} {item.weight} {item.sentence}\n")
-        f.write('\n')
+            # f.write(f"{item.index} {item.weight} {item.sentence}\n")
+            f.write(f"{item.sentence}; ")
+        f.write('\n\n')
