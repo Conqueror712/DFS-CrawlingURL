@@ -37,5 +37,5 @@ with open('sorted_result.txt', 'r') as f:
         else:
             print('请求失败，状态码：', response.status_code)
 
-        # 等待0.5秒
-        time.sleep(0.5)
+        # 等待1秒
+        time.sleep(1)
