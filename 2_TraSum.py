@@ -25,7 +25,6 @@ with open('sorted_result.txt', 'r') as f:
         print("successful = ", successful_cnt)
         print("failed = ", failed_cnt)
 
-        # 调用第二份代码进行关键词提取和文本摘要
         if is_suc == 1:  # 有成功的网站就进行一次处理
             with codecs.open('long_text.txt', 'w', 'utf-8') as f:
                 for text in texts:
