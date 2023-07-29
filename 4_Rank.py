@@ -12,7 +12,7 @@ with open('sorted_result.txt', 'r') as f:
 
         # 发送HTTP请求
         response = requests.get('https://apistore.aizhan.com/baidurank/siteinfos/'
-                                '2067c8d0d686ee9f08116b72ea7218ff', params=params)
+                                '******', params=params)
 
         # 处理响应结果
         if response.status_code == 200:
